@@ -3,15 +3,12 @@
 }
 
 #lateral_bar {
-    position: absolute;
-    width: 33.3333%;
     background-color: pink;
-    visibility: visible;
 }
 
 .lateral_btn{
 }
 
 #board_display {
-    
+    background-color: pink;
 }
