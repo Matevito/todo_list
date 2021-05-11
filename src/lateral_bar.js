@@ -1,6 +1,6 @@
 import {dom} from "./modules"
 
-function load_lateralBar(){
+function create_lateralBar(){
     // create container
     let header_container = dom.create_div()
 
@@ -10,7 +10,7 @@ function load_lateralBar(){
     // add today
     let today_btn = dom.create_btn("today","header_btn");
 
-    // proyects //display here the proyects?
+    //todo: proyects //display here the proyects?
     let proyects_btn = dom.create_btn("proyects", "header_btn");
 
     // add notes
@@ -29,4 +29,4 @@ function load_lateralBar(){
     return header_container
 }
 
-export {load_lateralBar}
+export {create_lateralBar}

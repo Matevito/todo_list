@@ -1,5 +1,6 @@
 const dom = (() => {
     const create_div = () => {
+        //todo: add and id? with a default value of none?
         let div = document.createElement("div");
         return div
     }
