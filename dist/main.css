@@ -1,0 +1,14 @@
+#header {
+    background-color: plum;
+}
+
+#lateral_bar {
+    position: absolute;
+    width: 33.3333%;
+    background-color: pink;
+    visibility: visible;
+}
+
+#board_display {
+    
+}
