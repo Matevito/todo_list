@@ -96,6 +96,15 @@ function create_proyects(){
         proyect_cell.appendChild(edit);
         proyects_display.appendChild(proyect_cell)
     }
+
+    //todo: add new proyect logic
+    let newProyect_btn = document.createElement("button");
+    newProyect_btn.textContent = "New Proyect!"
+    newProyect_btn.addEventListener("click", () => {
+        //code
+    })
+    proyects_display.appendChild(newProyect_btn)
+
     return proyects_display
 }
 
