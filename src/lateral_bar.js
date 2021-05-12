@@ -1,6 +1,7 @@
 import {dom} from "./modules"
 import {notes_display} from "./objects/note"
 import {create_proyects} from "./objects/proyects"
+import {today_display} from "./objects/today"
 
 function create_lateralBar(){
     // create container
@@ -16,14 +17,15 @@ function create_lateralBar(){
 
     // add today
     let today_btn = dom.create_listE("Today","lateral_btn");
-
+    today_btn.addEventListener("click", () => {
+        today_display()
+    })
     // add notes
     let notes_btn = dom.create_listE("Notes", "lateral_btn");
     notes_btn.addEventListener("click", () => {
         // clean current board
         let new_info = notes_display();
         dom.print_board_content(new_info)
-
         // apend new_info into "console"
     })
     // new todo, proyect or note /TODO: NEW PROYECT AND NEW EVENT LOGIC

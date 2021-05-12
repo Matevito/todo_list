@@ -88,4 +88,4 @@ function create_proyects(){
     return proyects_display
 }
 
-export {create_proyects}
+export {create_proyects, data}

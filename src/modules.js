@@ -34,11 +34,22 @@ const dom = (() => {
         console_container.appendChild(new_board)
     }
 
+    const get_currentDate = () => {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = mm + '/' + dd + '/' + yyyy;
+        return today
+    }
+
     return {
         create_div,
         create_listE,
         print_board_content,
-        reset_board
+        reset_board,
+        get_currentDate
     }
 })();
 

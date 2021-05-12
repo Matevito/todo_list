@@ -2,6 +2,7 @@ import {dom, container} from "./modules";
 import {create_lateralBar} from "./lateral_bar"
 import {create_proyects} from "./objects/proyects"
 
+
 function load_board(){
     // board container
     let board_container = dom.create_div("console");
@@ -13,7 +14,7 @@ function load_board(){
     let board_info = dom.create_div("board_display")
 
     //todo: only for development reasons
-    
+
     //append elements into the the container
     board_container.appendChild(lateral_bar);
 
