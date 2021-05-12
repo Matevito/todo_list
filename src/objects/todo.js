@@ -11,13 +11,6 @@ class To_do {
 function todo_element(todo) {
     let todo_element = document.createElement("tr")
     todo_element.classList.add("todo_el")
-
-    //todo: add event for checklist --- like a box
-    let checklist = document.createElement("button");
-    todo_element.appendChild(checklist);
-    checklist.addEventListener("click", () => {
-        //code goes here
-    })
     
     let title = document.createElement("td");
     title.textContent = todo.title;

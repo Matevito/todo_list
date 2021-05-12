@@ -44,16 +44,16 @@ function create_todos_display(proyect){
 }
 
 let examples = [
-    new To_do("wash dishes", "wash the dishes", "15/25/19","medium"),
-    new To_do("push ups", "2*25 push ups", "25/12/21","low"),
-    new To_do("write", "write 500 words of the novel", "25/4/19", "high"),
+    new To_do("wash dishes", "wash the dishes", "25/03/19","medium"),
+    new To_do("push ups", "2*25 push ups", "12/05/2021","low"),
+    new To_do("write", "write 500 words of the novel", "5/12/2021", "high"),
     new To_do("code", "30 minutes of leetcode", "25/08/29", "high")
 ]
 
 let examples2 = [
-    new To_do("laundry", "do the laundry", "25/25/19", "low"),
+    new To_do("laundry", "do the laundry", "25/5/19", "low"),
     new To_do("read", "read lotr", "1/02/22", "medium"),
-    new To_do("piano", "practice 30 min", "1/01/22", "high"),
+    new To_do("piano", "practice 30 min", "12/05/2021", "high"),
 ]
 
 let start_p = new Proyect("example 1");
@@ -82,8 +82,19 @@ function create_proyects(){
             document.getElementById("board_display").appendChild(new_display);
 
         })
+        //todo:edit proyect name and erase proyect logic
+        let edit = document.createElement("button");
+        edit.textContent = "edit";
+        edit.addEventListener("click", () => {
+
+        })
+
+        let proyect_cell = document.createElement("div")
+
         //folder with an event
-        proyects_display.appendChild(title)
+        proyect_cell.appendChild(title);
+        proyect_cell.appendChild(edit);
+        proyects_display.appendChild(proyect_cell)
     }
     return proyects_display
 }

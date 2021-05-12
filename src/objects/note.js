@@ -54,11 +54,6 @@ function notes_display(){
         let text = document.createElement("div"); 
         text.textContent = note.message;
 
-        let remove_note = document.createElement("button");
-        remove_note.textContent = "remove"
-        remove_note.addEventListener("click", () => {
-            //code goes here:: code to remove an element from an array and then refresh
-        })
 
         let edit_note = document.createElement("button");
         edit_note.textContent = "edit"
@@ -68,7 +63,6 @@ function notes_display(){
 
         note_cell.appendChild(title)
         note_cell.appendChild(text);
-        note_cell.appendChild(remove_note);
         note_cell.appendChild(edit_note);
 
         display.appendChild(note_cell);
