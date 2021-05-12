@@ -68,6 +68,12 @@ function notes_display(){
         display.appendChild(note_cell);
     }
 
+    let new_note = document.createElement("button");
+    new_note.textContent = "Add note!";
+    new_note.addEventListener("click", () => {
+        //logic goes here
+    })
+    display.appendChild(new_note)
     //correct this
 
     reset_board()
