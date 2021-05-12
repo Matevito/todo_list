@@ -16,14 +16,29 @@ const dom = (() => {
     }
 
     const print_board_content = (dom) => {
+        //solve bugg -- correct this
+        let container = document.getElementById("console");
+        container.removeChild(document.getElementById("board_display"))
+
         let board = document.getElementById("console");
+        dom.setAttribute("id", "board_display");
         board.appendChild(dom)
+    }
+
+    const reset_board = () => {
+        let board_display = document.getElementById("board_display")
+        document.getElementById("console").removeChild(board_display)
+        let new_board = document.createElement("div");
+        new_board.setAttribute("id", "board_display")
+        let console_container = document.getElementById("console");
+        console_container.appendChild(new_board)
     }
 
     return {
         create_div,
         create_listE,
-        print_board_content
+        print_board_content,
+        reset_board
     }
 })();
 
