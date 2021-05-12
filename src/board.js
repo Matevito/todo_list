@@ -1,6 +1,6 @@
 import {dom, container} from "./modules";
 import {create_lateralBar} from "./lateral_bar"
-import {create_todos} from "./objects/todo"
+import {create_proyects} from "./objects/proyects"
 
 function load_board(){
     // board container
@@ -22,8 +22,9 @@ function load_board(){
     container.appendChild(board_container);
 
     //test code
-    let info = create_todos();
-    container.appendChild(info)
+    let new_info = create_proyects()
+    board_container.appendChild(new_info)
+
 }
 
 //create board that shows the todos

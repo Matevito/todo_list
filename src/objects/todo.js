@@ -44,30 +44,16 @@ function todo_element(todo) {
 }
 
 //test logic
-function create_todos() {
-
-    //todo: separate erase and create dom elements
-    let board_display = document.getElementById("board_display")
-
-    document.getElementById("console").removeChild(board_display);
-
+function create_todos(list) {
     let new_board = document.createElement("div");
     new_board.setAttribute("id", "board_display")
     //
     
-    for (let element of todos){
+    for (let element of list){
         new_board.appendChild(todo_element(element));
     }
 
     return new_board
 }
 
-let todos = [
-    new To_do("wash dishes", "wash the dishes", "15/25/19","medium"),
-    new To_do("push ups", "2*25 push ups", "25/12/21","low"),
-    new To_do("write", "write 500 words of the novel", "25/4/19", "high"),
-    new To_do("code", "30 minutes of leetcode", "25/08/29", "high")
-]
-
-
-export {create_todos}
+export {create_todos, To_do}
