@@ -15,9 +15,15 @@ const dom = (() => {
         return list_e
     }
 
+    const print_board_content = (dom) => {
+        let board = document.getElementById("console");
+        board.appendChild(dom)
+    }
+
     return {
         create_div,
         create_listE,
+        print_board_content
     }
 })();
 

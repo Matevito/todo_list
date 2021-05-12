@@ -1,4 +1,5 @@
 import {dom} from "./modules"
+import {notes_display} from "./objects/note"
 
 function create_lateralBar(){
     // create container
@@ -12,7 +13,13 @@ function create_lateralBar(){
 
     // add notes
     let notes_btn = dom.create_listE("Notes", "lateral_btn");
+    notes_btn.addEventListener("click", () => {
+        // clean current board
+        let new_info = notes_display();
+        dom.print_board_content(new_info)
 
+        // apend new_info into "console"
+    })
     // new todo, proyect or note /TODO: NEW PROYECT AND NEW EVENT LOGIC
 
     //2. append the elements in the container

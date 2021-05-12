@@ -21,7 +21,6 @@ class DataBase {
 
 function clean_board(){
     let board_display = document.getElementById("board_display")
-    console.log(board_display)
     document.getElementById("console").removeChild(board_display)
 }
 
@@ -30,7 +29,6 @@ function reset_board(){
     let new_board = document.createElement("div");
     new_board.setAttribute("id", "board_display")
     let console_container = document.getElementById("console");
-
     console_container.appendChild(new_board)
 }
 

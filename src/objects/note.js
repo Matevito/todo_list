@@ -1,4 +1,3 @@
-
 class Note {
     constructor(title,message){
         this.title = title;
@@ -9,18 +8,26 @@ class Note {
 const note_library = (() => {
     let dataBase = [];
 
-    const add_note  =  (note) => {
+    const add_note  = (note) => {
         dataBase.push(note)
     }
+
+    const getData = () => {
+        return dataBase
+    }
     return {
-        add_note
+        add_note,
+        getData
     }
 })();
+
+note_library.add_note(new Note("ex.1", "let's do this the right way"))
+note_library.add_note(new Note("caso 2", "una nota en español!"))
+note_library.add_note(new Note("dritten", "eine dritten note. Aber dises auf deutsch"))
 
 //todo: this 2 into a module
 function clean_board(){
     let board_display = document.getElementById("board_display")
-    console.log(board_display)
     document.getElementById("console").removeChild(board_display)
 }
 
@@ -32,34 +39,47 @@ function reset_board(){
 
     console_container.appendChild(new_board)
 }
+
+
 function notes_display(){
     // one code to return the element to put on dom and another one to put it in
     let display = document.createElement("div");
 
-    let notes = note_library.dataBase
+    let notes = note_library.getData()
+
     for (let note of notes){
         let note_cell = document.createElement("div");
-        let text = document.createElement("div");
-        text.textContent = note;
+        let title = document.createElement("h4");
+        title.textContent = note.title
+        let text = document.createElement("div"); 
+        text.textContent = note.message;
 
         let remove_note = document.createElement("button");
+        remove_note.textContent = "remove"
         remove_note.addEventListener("click", () => {
             //code goes here:: code to remove an element from an array and then refresh
         })
 
         let edit_note = document.createElement("button");
+        edit_note.textContent = "edit"
         edit_note.addEventListener("click", () => {
             //code goes here
         })
 
+        note_cell.appendChild(title)
         note_cell.appendChild(text);
         note_cell.appendChild(remove_note);
         note_cell.appendChild(edit_note);
 
         display.appendChild(note_cell);
     }
+
+    //correct this
+
+    reset_board()
     return display
 }
+
 
 export {
     notes_display
