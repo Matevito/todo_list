@@ -52,10 +52,19 @@ let examples = [
     new To_do("code", "30 minutes of leetcode", "25/08/29", "high")
 ]
 
+let examples2 = [
+    new To_do("laundry", "do the laundry", "25/25/19", "low"),
+    new To_do("read", "read lotr", "1/02/22", "medium"),
+    new To_do("piano", "practice 30 min", "1/01/22", "high"),
+]
+
 let start_p = new Proyect("example 1");
 start_p.todos = examples;
+let new_p = new Proyect("new");
+new_p.todos = examples2;
 let data = new DataBase();
-data.add_proyect(start_p)
+data.add_proyect(start_p);
+data.add_proyect(new_p);
 
 ///
 function create_proyects(){
