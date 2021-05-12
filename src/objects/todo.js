@@ -46,6 +46,14 @@ function create_todos(list) {
         new_board.appendChild(todo_element(element));
     }
 
+    //todo: new todo inside proyect logic   
+    let new_todo = document.createElement("button");
+    new_todo.textContent = "Add a new todo!";
+    new_todo.addEventListener("click", () => {
+        //logic goes here
+    })
+    new_board.appendChild(new_todo)
+
     return new_board
 }
 
