@@ -1,3 +1,5 @@
+import {pop_up} from "./pop_up"
+
 class To_do {
     constructor(title, description, dueDate, priority){
         this.title = title;
@@ -50,6 +52,8 @@ function create_todos(list) {
     new_todo.textContent = "Add a new todo!";
     new_todo.addEventListener("click", () => {
         //logic goes here
+        let input = pop_up.newTodo_pop();
+        pop_up.display_popUp(input);
     })
     new_board.appendChild(new_todo)
 
