@@ -1,6 +1,7 @@
 import {dom} from "../modules"
 import {modify_data} from "./modify_data"
 import {Proyect} from "./proyects"
+import {Note} from "./note"
 
 const pop_up = (() => {
     const get_input_text = (name, id) => {
@@ -42,8 +43,6 @@ const pop_up = (() => {
             // create proyet_logic
             let title_value = document.getElementById("proyect_title").value
             let new_proyect = new Proyect(title_value);
-    
-            // todo:solve the bugg here
             modify_data.add_proyect(new_proyect);
         })
 
@@ -60,7 +59,10 @@ const pop_up = (() => {
         let save_btn = document.createElement("button");
         save_btn.textContent = "Save";
         save_btn.addEventListener("click", () => {
-            //todo:code goes here
+            let title = document.getElementById("note_title").value;
+            let note = document.getElementById("note_text").value;
+            let new_note = new Note(title,note);
+            modify_data.add_note(new_note);
         })
         pop_up_cell.appendChild(title);
         pop_up_cell.appendChild(note);

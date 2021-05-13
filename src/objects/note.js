@@ -84,5 +84,7 @@ function notes_display(){
 
 
 export {
-    notes_display
+    notes_display,
+    note_library,
+    Note
 }
