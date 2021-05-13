@@ -60,10 +60,32 @@ const pop_up = (() => {
         return pop_up_cell;
     }
 
+    const newTodo_pop = () => {
+        remove_popUP();
+        let pop_up_cell = dom.create_div("pop_up");
+
+        let title = get_input_text("Title", "todo_title");
+        let description = get_input_text("Description", "description_title");
+        let dueDate = get_input_text("Date", "dueDate");
+        let priority = get_input_text("priority", "priority");
+        let save_btn = document.createElement("button");
+        save_btn.textContent = "Save";
+        save_btn.addEventListener("click", () => {
+            //todo:code goes here
+        })
+        pop_up_cell.appendChild(title);
+        pop_up_cell.appendChild(description);
+        pop_up_cell.appendChild(dueDate);
+        pop_up_cell.appendChild(priority);
+        pop_up_cell.appendChild(save_btn);
+        return pop_up_cell
+    }
+
 
     return {
         newP_pop,
         newN_pop,
+        newTodo_pop,
         display_popUp,
         display_popUp,
         reset_popUp,
