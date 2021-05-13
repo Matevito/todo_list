@@ -20,6 +20,12 @@ const pop_up = (() => {
         console.removeChild(popUp_display)
 
     }
+    const reset_popUp = () => {
+        remove_popUP()
+        let console = document.getElementById("console");
+        let pop_up_cell = dom.create_div("pop_up");
+        console.appendChild(pop_up_cell);
+    }
     const newP_pop = () => {
         remove_popUP()
         let pop_up_cell = dom.create_div("pop_up");
@@ -42,6 +48,9 @@ const pop_up = (() => {
     return {
         display_popUp,
         newP_pop,
+        remove_popUP,
+        display_popUp,
+        reset_popUp,
     }
 
 })();

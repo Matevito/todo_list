@@ -2,6 +2,7 @@ import {dom} from "./modules"
 import {notes_display} from "./objects/note"
 import {create_proyects} from "./objects/proyects"
 import {today_display} from "./objects/today"
+import {pop_up} from "./objects/pop_up"
 
 function create_lateralBar(){
     // create container
@@ -10,7 +11,8 @@ function create_lateralBar(){
     // add home
     let proyects_btn = dom.create_listE("Proyects","lateral_btn");
     proyects_btn.addEventListener("click", () => {
-        dom.reset_board()
+        dom.reset_board();
+        pop_up.reset_popUp()
         let new_info = create_proyects();
         dom.print_board_content(new_info)
     })
