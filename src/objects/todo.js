@@ -60,4 +60,6 @@ function create_todos(list) {
     return new_board
 }
 
-export {create_todos, To_do}
+export {
+    create_todos,
+    To_do}

@@ -1,6 +1,6 @@
 import {dom} from "../modules"
 import {modify_data} from "./modify_data"
-import {Proyect} from "./proyects"
+import {Proyect, data} from "./proyects"
 import {Note} from "./note"
 
 const pop_up = (() => {
@@ -82,6 +82,15 @@ const pop_up = (() => {
         save_btn.textContent = "Save";
         save_btn.addEventListener("click", () => {
             //todo:code goes here
+            let folder_title = document.querySelector("h3").textContent
+            let index = 0
+            // todo: proyect folder function to modify it
+            for (let proyect of data.proyects){
+                if(proyect.title === folder_title ){
+                    console.log(proyect)
+                }
+            }
+            //1. identify current proyect and edit it 
         })
         pop_up_cell.appendChild(title);
         pop_up_cell.appendChild(description);
