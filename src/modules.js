@@ -1,3 +1,5 @@
+import {pop_up} from "./objects/pop_up"
+import {create_proyects} from "./objects/proyects"
 
 const dom = (() => {
     const create_div = (id="") => {
@@ -42,12 +44,20 @@ const dom = (() => {
         return today
     }
 
+    const show_proyects = () => {
+        dom.reset_board();
+        pop_up.reset_popUp()
+        let new_info = create_proyects();
+        dom.print_board_content(new_info)
+    }
+
     return {
         create_div,
         create_listE,
         print_board_content,
         reset_board,
-        get_currentDate
+        get_currentDate,
+        show_proyects,
     }
 })();
 

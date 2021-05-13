@@ -1,4 +1,10 @@
 import {dom} from "../modules"
+
+const modify_data = (() => {
+
+})();
+
+
 const pop_up = (() => {
     const get_input_text = (name, id) => {
         let input_cell = document.createElement("div");
