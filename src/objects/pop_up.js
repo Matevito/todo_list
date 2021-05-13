@@ -1,9 +1,6 @@
 import {dom} from "../modules"
-
-const modify_data = (() => {
-
-})();
-
+import {modify_data} from "./modify_data"
+import {Proyect} from "./proyects"
 
 const pop_up = (() => {
     const get_input_text = (name, id) => {
@@ -42,7 +39,12 @@ const pop_up = (() => {
         let save_btn = document.createElement("button");
         save_btn.textContent = "Save";
         save_btn.addEventListener("click", () => {
-            //todo:code goes here
+            // create proyet_logic
+            let title_value = document.getElementById("proyect_title").value
+            let new_proyect = new Proyect(title_value);
+    
+            // todo:solve the bugg here
+            modify_data.add_proyect(new_proyect);
         })
 
         pop_up_cell.appendChild(title);

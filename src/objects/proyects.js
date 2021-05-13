@@ -114,4 +114,7 @@ function create_proyects(){
     return proyects_display
 }
 
-export {create_proyects, data}
+export {
+    create_proyects,
+    data,
+    Proyect}
