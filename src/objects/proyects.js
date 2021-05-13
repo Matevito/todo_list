@@ -75,6 +75,7 @@ function create_proyects(){
         let title = document.createElement("h4");
         title.textContent = proyect.title;
         title.addEventListener("click", () => {
+            pop_up.reset_popUp()
             // erase // conect this element with the proyect index
             //display these todos
             reset_board()

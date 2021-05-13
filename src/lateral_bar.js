@@ -27,6 +27,7 @@ function create_lateralBar(){
     let notes_btn = dom.create_listE("Notes", "lateral_btn");
     notes_btn.addEventListener("click", () => {
         // clean current board
+        pop_up.reset_popUp()
         let new_info = notes_display();
         dom.print_board_content(new_info)
         // apend new_info into "console"
