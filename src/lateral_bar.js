@@ -34,8 +34,8 @@ function create_lateralBar(){
     //2. append the elements in the container
 
     bar_container.appendChild(proyects_btn)
-    bar_container.appendChild(today_btn)
     bar_container.appendChild(notes_btn)
+    bar_container.appendChild(today_btn)
 
     return bar_container
 }

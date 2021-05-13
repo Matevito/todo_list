@@ -20,11 +20,17 @@ function load_board(){
 
     board_container.appendChild(board_info);
 
+    let popUp_display = dom.create_div("pop_up");
+    board_container.appendChild(popUp_display);
+
     container.appendChild(board_container);
 
     //test code
     let new_info = create_proyects()
     board_container.appendChild(new_info)
+
+
+    //APPEND POP_UP
 
 }
 

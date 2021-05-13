@@ -1,4 +1,5 @@
 import {create_todos, To_do} from "./todo"
+import {pop_up} from "./pop_up"
 
 class Proyect {
     constructor(title){
@@ -102,6 +103,11 @@ function create_proyects(){
     newProyect_btn.textContent = "New Proyect!"
     newProyect_btn.addEventListener("click", () => {
         //code
+        // create a proyect and append it to the database
+        let input = pop_up.newP_pop()
+
+        pop_up.display_popUp(input);
+        //refresh the board
     })
     proyects_display.appendChild(newProyect_btn)
 
