@@ -1,3 +1,5 @@
+import {pop_up} from "./pop_up"
+
 class Note {
     constructor(title,message){
         this.title = title;
@@ -25,7 +27,6 @@ note_library.add_note(new Note("ex.1", "let's do this the right way"))
 note_library.add_note(new Note("caso 2", "una nota en español!"))
 note_library.add_note(new Note("dritten", "eine dritten note. Aber dises auf deutsch"))
 
-//todo: this 2 into a module
 function clean_board(){
     let board_display = document.getElementById("board_display")
     document.getElementById("console").removeChild(board_display)
@@ -71,7 +72,8 @@ function notes_display(){
     let new_note = document.createElement("button");
     new_note.textContent = "Add note!";
     new_note.addEventListener("click", () => {
-        //logic goes here
+        let input = pop_up.newN_pop()
+        pop_up.display_popUp(input);
     })
     display.appendChild(new_note)
     //correct this

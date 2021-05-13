@@ -44,11 +44,27 @@ const pop_up = (() => {
         return pop_up_cell;
     }
 
+    const newN_pop = () => {
+        remove_popUP();
+        let pop_up_cell = dom.create_div("pop_up");
+        let title = get_input_text("Title", "note_title");
+        let note = get_input_text("Note", "note_text");
+        let save_btn = document.createElement("button");
+        save_btn.textContent = "Save";
+        save_btn.addEventListener("click", () => {
+            //todo:code goes here
+        })
+        pop_up_cell.appendChild(title);
+        pop_up_cell.appendChild(note);
+        pop_up_cell.appendChild(save_btn);
+        return pop_up_cell;
+    }
+
 
     return {
-        display_popUp,
         newP_pop,
-        remove_popUP,
+        newN_pop,
+        display_popUp,
         display_popUp,
         reset_popUp,
     }
