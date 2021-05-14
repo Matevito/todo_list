@@ -14,7 +14,7 @@ function create_lateralBar(){
     // add today
     let today_btn = dom.create_listE("Today","lateral_btn");
     today_btn.addEventListener("click", () => {
-        //todo:
+        //todo: complete this event
         today_display()
     })
     // add notes

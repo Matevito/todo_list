@@ -1,6 +1,6 @@
 import {dom} from "../modules"
 import {modify_data} from "./modify_data"
-import {Proyect, data} from "./proyects"
+import {Proyect} from "./proyects"
 import {Note} from "./note"
 import { To_do } from "./todo";
 
@@ -86,15 +86,8 @@ const pop_up = (() => {
             let description_v = document.getElementById("description_title").value
             let dueDate_v = document.getElementById("dueDate").value
             let priority_v = document.getElementById("priority").value
-            
             let new_todo = new To_do(title_v, description_v, dueDate_v, priority_v)
-            
-            let index = get_proyect_index()
-            let c_proyect = data.proyects[index]
-            c_proyect.add_todo(new_todo);
-            dom.show_proyects()
-
-
+            modify_data.add_todo(new_todo)
             //1. identify current proyect and edit it 
         })
         pop_up_cell.appendChild(title);
@@ -105,15 +98,23 @@ const pop_up = (() => {
         return pop_up_cell
     }
 
-    const get_proyect_index = () => {
-        let folder_title = document.querySelector("h3").textContent
-            let index = 0
-            // todo: proyect folder function to modify it
-            for (let proyect of data.proyects){
-                if(proyect.title === folder_title ){
-                    return data.proyects.indexOf(proyect)
-                }
-            }
+    const editP_pop = () => {
+        remove_popUP();
+        let pop_up_cell = dom.create_div("pop_up");
+        //interface
+
+        let title = get_input_text("Title", "proyect_title");
+        
+        let edit_btn = document.createElement("button");
+        edit_btn.textContent = "edit";
+        edit_btn.addEventListener("click", () => {
+            // create proyet_logic
+        })
+
+        pop_up_cell.appendChild(title);
+        pop_up_cell.appendChild(edit_btn);
+        return pop_up_cell;
+         
     }
 
     return {
@@ -123,6 +124,7 @@ const pop_up = (() => {
         display_popUp,
         display_popUp,
         reset_popUp,
+        editP_pop
     }
 
 })();

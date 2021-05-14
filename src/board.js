@@ -13,7 +13,6 @@ function load_board(){
     //board_info displayed
     let board_info = dom.create_div("board_display")
 
-    //todo: only for development reasons
 
     //append elements into the the container
     board_container.appendChild(lateral_bar);

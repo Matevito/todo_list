@@ -4,7 +4,6 @@ import {create_proyects} from "./objects/proyects"
 
 const dom = (() => {
     const create_div = (id="") => {
-        //todo: add and id? with a default value of none?
         let div = document.createElement("div");
         if (id != ""){
             div.setAttribute('id', id);

@@ -78,6 +78,8 @@ function create_proyects(){
             pop_up.reset_popUp()
             // erase // conect this element with the proyect index
             //display these todos
+
+            //todo: this code to reset proyect
             reset_board()
 
             let new_display = create_todos_display(proyect);
@@ -88,6 +90,8 @@ function create_proyects(){
         let edit = document.createElement("button");
         edit.textContent = "edit";
         edit.addEventListener("click", () => {
+            let input = pop_up.editP_pop()
+            pop_up.display_popUp(input)
 
         })
 
