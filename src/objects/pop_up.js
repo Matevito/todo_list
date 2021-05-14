@@ -111,7 +111,9 @@ const pop_up = (() => {
 
         edit_btn.addEventListener("click", () => {
             // create proyet_logic
-
+            let new_title = document.getElementById("proyect_title").value
+            data.proyects[index].title = new_title;
+            dom.show_proyects()
         })
 
         pop_up_cell.appendChild(title);
