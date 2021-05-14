@@ -1,16 +1,17 @@
 import {dom} from "../modules"
 import {modify_data} from "./modify_data"
-import {Proyect} from "./proyects"
+import {data, Proyect} from "./proyects"
 import {Note} from "./note"
 import { To_do } from "./todo";
 
 const pop_up = (() => {
-    const get_input_text = (name, id) => {
+    const get_input_text = (name, id, value = "") => {
         let input_cell = document.createElement("div");
         input_cell.textContent = name;
         let input = document.createElement("input");
         input.setAttribute("type", "text");
         input.setAttribute("id", id);
+        input.value = value
         input_cell.appendChild(input)
         return input_cell
     }
@@ -98,23 +99,24 @@ const pop_up = (() => {
         return pop_up_cell
     }
 
-    const editP_pop = () => {
+    const editP_pop = (index) => {
         remove_popUP();
         let pop_up_cell = dom.create_div("pop_up");
         //interface
+        let title_value = data.proyects[index].title
 
-        let title = get_input_text("Title", "proyect_title");
-        
+        let title = get_input_text("Title", "proyect_title", title_value);
         let edit_btn = document.createElement("button");
         edit_btn.textContent = "edit";
+
         edit_btn.addEventListener("click", () => {
             // create proyet_logic
+
         })
 
         pop_up_cell.appendChild(title);
         pop_up_cell.appendChild(edit_btn);
         return pop_up_cell;
-         
     }
 
     return {
@@ -124,7 +126,7 @@ const pop_up = (() => {
         display_popUp,
         display_popUp,
         reset_popUp,
-        editP_pop
+        editP_pop,
     }
 
 })();

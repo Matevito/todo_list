@@ -1,5 +1,6 @@
 import {create_todos, To_do} from "./todo"
 import {pop_up} from "./pop_up"
+import {modify_data} from "./modify_data"
 
 class Proyect {
     constructor(title){
@@ -90,7 +91,10 @@ function create_proyects(){
         let edit = document.createElement("button");
         edit.textContent = "edit";
         edit.addEventListener("click", () => {
-            let input = pop_up.editP_pop()
+            let name = title.textContent
+            let folder_index = modify_data.get_proyect_index(name)
+            let input = pop_up.editP_pop(folder_index)
+            let folder_name = title.textContent
             pop_up.display_popUp(input)
 
         })
@@ -109,7 +113,6 @@ function create_proyects(){
         //code
         // create a proyect and append it to the database
         let input = pop_up.newP_pop()
-
         pop_up.display_popUp(input);
         //refresh the board
     })
