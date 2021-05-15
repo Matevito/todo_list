@@ -107,7 +107,7 @@ const pop_up = (() => {
 
         let title = get_input_text("Title", "proyect_title", title_value);
         let edit_btn = document.createElement("button");
-        edit_btn.textContent = "edit";
+        edit_btn.textContent = "save changes";
 
         edit_btn.addEventListener("click", () => {
             // create proyet_logic
@@ -116,8 +116,16 @@ const pop_up = (() => {
             dom.show_proyects()
         })
 
+        let remove_btn = document.createElement("button");
+        remove_btn.textContent = "remove"
+        remove_btn.addEventListener("click", () => {
+            data.proyects.splice(index, 1)
+            dom.show_proyects()
+        })
+
         pop_up_cell.appendChild(title);
         pop_up_cell.appendChild(edit_btn);
+        pop_up_cell.appendChild(remove_btn);
         return pop_up_cell;
     }
 
