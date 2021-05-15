@@ -155,7 +155,8 @@ const pop_up = (() => {
         let remove_btn = document.createElement("button");
         remove_btn.textContent = "remove"
         remove_btn.addEventListener("click", () => {
-
+            note_library.dataBase.splice(index, 1);
+            dom.show_notes();
         })
 
         pop_up_cell.appendChild(title);
