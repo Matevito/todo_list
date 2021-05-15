@@ -63,7 +63,7 @@ const dom = (() => {
 
         let title = document.createElement("h3");
         title.textContent = proyect.title
-        let board_info = create_todos(proyect);
+        let board_info = create_todos(proyect.todos);
 
         let display = document.createElement("div");
         display.appendChild(title);

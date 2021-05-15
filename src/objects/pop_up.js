@@ -189,14 +189,14 @@ const pop_up = (() => {
             todo_obj.dueDate = new_dueDate;
             todo_obj.priority = new_priority;
             //todo: show x proyect
-            let new_todos = data.proyects[proyect_index].todos
+            let new_todos = data.proyects[proyect_index]
             dom.show_todos(new_todos)
         })
 
         let remove_btn = document.createElement("button");
         remove_btn.textContent = "remove";
         remove_btn.addEventListener("click", () => {
-
+            //do this fucker thing
         })
 
         pop_up_cell.appendChild(title);
