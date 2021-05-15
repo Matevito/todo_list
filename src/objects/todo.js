@@ -1,4 +1,5 @@
 import {pop_up} from "./pop_up"
+import {modify_data} from "./modify_data"
 
 class To_do {
     constructor(title, description, dueDate, priority){
@@ -31,6 +32,12 @@ function todo_element(todo) {
     edit.textContent = "Edit";
     edit.addEventListener("click", () => {
         //logic goes here
+        let proyect_name = document.querySelector("h3").textContent;
+        let proyect_index = modify_data.get_proyect_index(proyect_name);
+        let todo_title = title.textContent;
+        let todo_index = modify_data.get_todo_index(proyect_index, todo_title)
+        
+        console.log(todo_index)
     })
     todo_element.appendChild(edit)
     //edit btn //td

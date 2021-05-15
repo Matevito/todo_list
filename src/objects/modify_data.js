@@ -40,9 +40,19 @@ const modify_data = (() => {
             }
         }
     }
+
+    const get_todo_index = (proyect_index, todo_title) => {
+        let proyect_data = data.proyects[proyect_index].todos;
+        for (let todo of proyect_data){
+            if(todo.title === todo_title){
+                return proyect_data.indexOf(todo)
+            }
+        }
+    }
     return{
         get_proyect_index,
         get_note_index,
+        get_todo_index,
         add_proyect,
         add_note,
         add_todo,
