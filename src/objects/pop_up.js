@@ -167,6 +167,7 @@ const pop_up = (() => {
         return pop_up_cell
     }
     const editT_pop = (proyect_index, todo_index) => {
+        remove_popUP()
         let pop_up_cell = dom.create_div("pop_up");
         let todo_obj = data.proyects[proyect_index].todos[todo_index];
         
@@ -175,11 +176,34 @@ const pop_up = (() => {
         let dueDate = get_input_text("Date", "dueDate", todo_obj.dueDate);
         let priority = get_input_text("priority", "priority", todo_obj.priority);
 
+        let edit_btn = document.createElement("button");
+        edit_btn.textContent = "save changes";
+        edit_btn.addEventListener("click", () => {
+            let new_title = document.getElementById("todo_title").value;
+            let new_description = document.getElementById("description_title").value;
+            let new_dueDate = document.getElementById("dueDate").value;
+            let new_priority  =document.getElementById("priority").value;
+            
+            todo_obj.title = new_title;
+            todo_obj.description = new_description;
+            todo_obj.dueDate = new_dueDate;
+            todo_obj.priority = new_priority;
+            //todo: show x proyect
+        })
+
+        let remove_btn = document.createElement("button");
+        remove_btn.textContent = "remove";
+        remove_btn.addEventListener("click", () => {
+
+        })
 
         pop_up_cell.appendChild(title);
         pop_up_cell.appendChild(description);
         pop_up_cell.appendChild(dueDate);
         pop_up_cell.appendChild(priority);
+        pop_up_cell.appendChild(edit_btn);
+        pop_up_cell.appendChild(remove_btn);
+
         return pop_up_cell
     }
 
