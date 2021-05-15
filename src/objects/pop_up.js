@@ -189,6 +189,8 @@ const pop_up = (() => {
             todo_obj.dueDate = new_dueDate;
             todo_obj.priority = new_priority;
             //todo: show x proyect
+            let new_todos = data.proyects[proyect_index].todos
+            dom.show_todos(new_todos)
         })
 
         let remove_btn = document.createElement("button");

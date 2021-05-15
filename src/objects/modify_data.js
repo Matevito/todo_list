@@ -20,12 +20,11 @@ const modify_data = (() => {
         let c_proyect = data.proyects[index]
         c_proyect.add_todo(todo);
 
-        //todo: show current folder
-        dom.show_proyects()
+        //todo: code goes here
+        dom.show_todos(c_proyect.todos)
     }
 
     const get_proyect_index = (folder_title) => {
-        // todo: proyect folder function to modify it
         for (let proyect of data.proyects){
             if(proyect.title === folder_title ){
                 return data.proyects.indexOf(proyect)

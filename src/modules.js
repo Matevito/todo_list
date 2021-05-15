@@ -1,6 +1,7 @@
 import {pop_up} from "./objects/pop_up"
 import {notes_display} from "./objects/note"
 import {create_proyects} from "./objects/proyects"
+import {create_todos} from "./objects/todo"
 
 const dom = (() => {
     const create_div = (id="") => {
@@ -57,6 +58,20 @@ const dom = (() => {
         dom.print_board_content(new_info)
     }
 
+    const show_todos = (proyect) => {
+        pop_up.reset_popUp()
+
+        let title = document.createElement("h3");
+        title.textContent = proyect.title
+        let board_info = create_todos(proyect);
+
+        let display = document.createElement("div");
+        display.appendChild(title);
+        display.appendChild(board_info);
+
+        dom.print_board_content(display)        
+    }
+
     return {
         create_div,
         create_listE,
@@ -65,6 +80,7 @@ const dom = (() => {
         get_currentDate,
         show_proyects,
         show_notes,
+        show_todos
     }
 })();
 

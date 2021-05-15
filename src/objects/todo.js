@@ -49,7 +49,6 @@ function create_todos(list) {
     let new_board = document.createElement("div");
     new_board.setAttribute("id", "board_display")
     //
-    
     for (let element of list){
         new_board.appendChild(todo_element(element));
     }
@@ -69,4 +68,5 @@ function create_todos(list) {
 
 export {
     create_todos,
+    todo_element,
     To_do}
