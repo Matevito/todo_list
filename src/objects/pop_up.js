@@ -166,6 +166,22 @@ const pop_up = (() => {
 
         return pop_up_cell
     }
+    const editT_pop = (proyect_index, todo_index) => {
+        let pop_up_cell = dom.create_div("pop_up");
+        let todo_obj = data.proyects[proyect_index].todos[todo_index];
+        
+        let title = get_input_text("Title", "todo_title", todo_obj.title);
+        let description = get_input_text("Description", "description_title", todo_obj.description);
+        let dueDate = get_input_text("Date", "dueDate", todo_obj.dueDate);
+        let priority = get_input_text("priority", "priority", todo_obj.priority);
+
+
+        pop_up_cell.appendChild(title);
+        pop_up_cell.appendChild(description);
+        pop_up_cell.appendChild(dueDate);
+        pop_up_cell.appendChild(priority);
+        return pop_up_cell
+    }
 
     return {
         newP_pop,
@@ -176,6 +192,7 @@ const pop_up = (() => {
         reset_popUp,
         editP_pop,
         editN_pop,
+        editT_pop,
     }
 
 })();

@@ -36,8 +36,8 @@ function todo_element(todo) {
         let proyect_index = modify_data.get_proyect_index(proyect_name);
         let todo_title = title.textContent;
         let todo_index = modify_data.get_todo_index(proyect_index, todo_title)
-        
-        console.log(todo_index)
+        let input = pop_up.editT_pop(proyect_index,todo_index);
+        pop_up.display_popUp(input)
     })
     todo_element.appendChild(edit)
     //edit btn //td
