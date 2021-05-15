@@ -89,7 +89,6 @@ const pop_up = (() => {
             let priority_v = document.getElementById("priority").value
             let new_todo = new To_do(title_v, description_v, dueDate_v, priority_v)
             modify_data.add_todo(new_todo)
-            //1. identify current proyect and edit it 
         })
         pop_up_cell.appendChild(title);
         pop_up_cell.appendChild(description);
@@ -188,7 +187,7 @@ const pop_up = (() => {
             todo_obj.description = new_description;
             todo_obj.dueDate = new_dueDate;
             todo_obj.priority = new_priority;
-            //todo: show x proyect
+            //  show x proyect
             let new_todos = data.proyects[proyect_index]
             dom.show_todos(new_todos)
         })

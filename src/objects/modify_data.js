@@ -19,9 +19,10 @@ const modify_data = (() => {
         let index = get_proyect_index(folder_title)
         let c_proyect = data.proyects[index]
         c_proyect.add_todo(todo);
-
-        //todo: code goes here
-        dom.show_todos(c_proyect.todos)
+        dom.show_todos(c_proyect)
+        //1. get proyect index and then show it
+        //let proyect_title = document.querySelector("h3");
+        //console.log(proyect_title)
     }
 
     const get_proyect_index = (folder_title) => {

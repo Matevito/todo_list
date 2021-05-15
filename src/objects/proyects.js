@@ -80,21 +80,21 @@ function create_proyects(){
             // erase // conect this element with the proyect index
             //display these todos
 
-            //todo: this code to reset proyect
+            //  this code to reset proyect
             reset_board()
 
             let new_display = create_todos_display(proyect);
             document.getElementById("board_display").appendChild(new_display);
 
         })
-        //todo:edit proyect name and erase proyect logic
+        // edit proyect name and erase proyect logic
         let edit = document.createElement("button");
         edit.textContent = "edit";
         edit.addEventListener("click", () => {
             let name = title.textContent
             let folder_index = modify_data.get_proyect_index(name)
             let input = pop_up.editP_pop(folder_index)
-            //todo: this has a porpouse?
+            //  this has a porpouse?
             let folder_name = title.textContent
             pop_up.display_popUp(input)
         })
