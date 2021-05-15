@@ -145,7 +145,11 @@ const pop_up = (() => {
         let edit_btn = document.createElement("button");
         edit_btn.textContent ="save changes";
         edit_btn.addEventListener("click", () => {
-            
+            let new_title = document.getElementById("note_title").value;
+            let new_message = document.getElementById("note_text").value;
+            note_library.dataBase[index].title = new_title;
+            note_library.dataBase[index].message = new_message;
+            dom.show_notes();
         })
 
         let remove_btn = document.createElement("button");
