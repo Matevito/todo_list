@@ -25,15 +25,24 @@ const modify_data = (() => {
     }
 
     const get_proyect_index = (folder_title) => {
-            // todo: proyect folder function to modify it
-            for (let proyect of data.proyects){
-                if(proyect.title === folder_title ){
-                    return data.proyects.indexOf(proyect)
-                }
+        // todo: proyect folder function to modify it
+        for (let proyect of data.proyects){
+            if(proyect.title === folder_title ){
+                return data.proyects.indexOf(proyect)
             }
+        }
+    }
+
+    const get_note_index = (note_title) => {
+        for (let note of note_library.dataBase){
+            if(note_title === note.title){
+                return note_library.dataBase.indexOf(note)
+            }
+        }
     }
     return{
         get_proyect_index,
+        get_note_index,
         add_proyect,
         add_note,
         add_todo,

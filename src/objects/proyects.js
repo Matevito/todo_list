@@ -94,9 +94,9 @@ function create_proyects(){
             let name = title.textContent
             let folder_index = modify_data.get_proyect_index(name)
             let input = pop_up.editP_pop(folder_index)
+            //todo: this has a porpouse?
             let folder_name = title.textContent
             pop_up.display_popUp(input)
-
         })
 
         let proyect_cell = document.createElement("div")

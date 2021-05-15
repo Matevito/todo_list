@@ -1,3 +1,4 @@
+import { modify_data } from "./modify_data";
 import {pop_up} from "./pop_up"
 
 class Note {
@@ -19,7 +20,8 @@ const note_library = (() => {
     }
     return {
         add_note,
-        getData
+        getData,
+        dataBase
     }
 })();
 
@@ -60,6 +62,9 @@ function notes_display(){
         edit_note.textContent = "edit"
         edit_note.addEventListener("click", () => {
             //code goes here
+            let name = title.textContent
+            let note_index = modify_data.get_note_index(name)
+            console.log(note_index)
         })
 
         note_cell.appendChild(title)

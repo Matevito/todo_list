@@ -129,6 +129,10 @@ const pop_up = (() => {
         return pop_up_cell;
     }
 
+    const editN_pop = (index) => {
+
+    }
+
     return {
         newP_pop,
         newN_pop,
@@ -137,6 +141,7 @@ const pop_up = (() => {
         display_popUp,
         reset_popUp,
         editP_pop,
+        editN_pop,
     }
 
 })();
