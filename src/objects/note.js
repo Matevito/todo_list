@@ -64,7 +64,8 @@ function notes_display(){
             //code goes here
             let name = title.textContent
             let note_index = modify_data.get_note_index(name)
-            console.log(note_index)
+            let input  = pop_up.editN_pop(note_index);
+            pop_up.display_popUp(input)
         })
 
         note_cell.appendChild(title)

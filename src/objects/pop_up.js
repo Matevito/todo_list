@@ -1,7 +1,7 @@
 import {dom} from "../modules"
 import {modify_data} from "./modify_data"
 import {data, Proyect} from "./proyects"
-import {Note} from "./note"
+import {Note, note_library} from "./note"
 import { To_do } from "./todo";
 
 const pop_up = (() => {
@@ -130,7 +130,36 @@ const pop_up = (() => {
     }
 
     const editN_pop = (index) => {
+        remove_popUP();
+        let pop_up_cell = dom.create_div("pop_up");
 
+        let note_obj = note_library.dataBase[index];
+
+        let note_title = note_obj.title;
+        let note_message = note_obj.message;
+        
+
+        let title = get_input_text("Title", "note_title", note_title);
+        let note = get_input_text("Note", "note_text", note_message);
+
+        let edit_btn = document.createElement("button");
+        edit_btn.textContent ="save changes";
+        edit_btn.addEventListener("click", () => {
+            
+        })
+
+        let remove_btn = document.createElement("button");
+        remove_btn.textContent = "remove"
+        remove_btn.addEventListener("click", () => {
+
+        })
+
+        pop_up_cell.appendChild(title);
+        pop_up_cell.appendChild(note);
+        pop_up_cell.appendChild(edit_btn);
+        pop_up_cell.appendChild(remove_btn);
+
+        return pop_up_cell
     }
 
     return {
