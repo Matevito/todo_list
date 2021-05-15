@@ -26,16 +26,14 @@ function todo_element(todo) {
     let priority = document.createElement("td");
     priority.textContent = todo.priority;
     todo_element.appendChild(priority)
-
-    //todo: edit event logic
     let edit = document.createElement("button");
     edit.textContent = "Edit";
     edit.addEventListener("click", () => {
+
         //logic goes here
         let proyect_name = document.querySelector("h3").textContent;
         let proyect_index = modify_data.get_proyect_index(proyect_name);
         let todo_title = title.textContent;
-        console.log(proyect_name)
         let todo_index = modify_data.get_todo_index(proyect_index, todo_title)
         let input = pop_up.editT_pop(proyect_index,todo_index);
         pop_up.display_popUp(input)
@@ -53,8 +51,7 @@ function create_todos(list) {
     for (let element of list){
         new_board.appendChild(todo_element(element));
     }
-
-    //todo: new todo inside proyect logic   
+ 
     let new_todo = document.createElement("button");
     new_todo.textContent = "Add a new todo!";
     new_todo.addEventListener("click", () => {

@@ -3,6 +3,7 @@ import {modify_data} from "./modify_data"
 import {data, Proyect} from "./proyects"
 import {Note, note_library} from "./note"
 import { To_do } from "./todo";
+import { da } from "date-fns/locale";
 
 const pop_up = (() => {
     const get_input_text = (name, id, value = "") => {
@@ -195,7 +196,10 @@ const pop_up = (() => {
         let remove_btn = document.createElement("button");
         remove_btn.textContent = "remove";
         remove_btn.addEventListener("click", () => {
-            //do this fucker thing
+            //i have the indexes
+            data.proyects[proyect_index].todos.splice(todo_index,1)
+            let new_todos = data.proyects[proyect_index]
+            dom.show_todos(new_todos)
         })
 
         pop_up_cell.appendChild(title);
