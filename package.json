@@ -17,10 +17,18 @@
   },
   "homepage": "https://github.com/Matevito/todo_list#readme",
   "devDependencies": {
-    "webpack": "^5.37.0",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.2",
+    "prettier": "2.3.0",
+    "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "date-fns": "^2.21.3"
+    "date-fns": "^2.21.3",
+    "lodash": "^4.17.21"
   }
 }

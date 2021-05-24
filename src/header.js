@@ -1,13 +1,13 @@
-import {dom, container} from "./modules"
+import { dom, container } from "./modules";
 
-function load_header(){
-    // create container
-    let header_container = dom.create_div("header");
+function load_header() {
+  // create container
+  let header_container = dom.create_div("header");
 
-    //  do something with the header(class, images, etc)
-    header_container.textContent = "Todo app!"
+  //  do something with the header(class, images, etc)
+  header_container.textContent = "Todo app!";
 
-    container.appendChild(header_container);
+  container.appendChild(header_container);
 }
 
-export{load_header}
+export { load_header };

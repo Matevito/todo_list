@@ -1,8 +1,10 @@
 # todo_list
+
 EXAMPLE: https://matevito.github.io/todo_list/
 
 TODO:
+
 1. PUT THE INFO INTO THE LOCAL STORAGE
 2. USE DATE OBJECTS TO WOKR WITH, WELL, DATES.
 3. ADD SHOW TODAY TODO'S METHOD.
-3. PUT CSS.
+4. PUT CSS.
